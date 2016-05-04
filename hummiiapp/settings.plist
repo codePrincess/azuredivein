@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>authority</key>
+	<string>https://login.microsoftonline.com/yourdirectorynamegoeshere.onmicrosoft.com/</string>
+	<key>clientId</key>
+	<string></string>
+	<key>scopes</key>
+	<array>
+		<string>c3c9b2c6-0f3e-40ea-b9b2-f472357e490f</string>
+	</array>
+	<key>additionalScopes</key>
+	<array/>
+	<key>redirectUri</key>
+	<string>urn:ietf:wg:oauth:2.0:oob</string>
+	<key>taskWebAPI</key>
+	<string>http://localhost/tasks:3000</string>
+	<key>emailSignUpPolicyId</key>
+	<string></string>
+	<key>emailSignInPolicyId</key>
+	<string></string>
+	<key>fullScreen</key>
+	<false/>
+	<key>showClaims</key>
+	<true/>
+	<key>userId</key>
+	<string>admin</string>
+</dict>
+</plist>
