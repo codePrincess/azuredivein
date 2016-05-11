@@ -29,6 +29,7 @@ typedef void (^QSCompletionBlock) ();
 
 @property (nonatomic, strong) MSClient *client;
 @property (nonatomic, strong) NSArray *data;
+@property (nonatomic, strong) MSCoreDataStore *store;
 @property (nonatomic, strong) NSData *pushToken;
 
 + (QSTodoService *)defaultService;

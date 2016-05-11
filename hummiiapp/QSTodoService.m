@@ -31,6 +31,7 @@
 @property (nonatomic, strong) MSTable *table;
 @property (nonatomic, strong) ADAuthenticationContext* authContext;
 @property (nonatomic, assign) BOOL completed;
+@property (nonatomic, strong) MSSyncTable *syncTable;
 
 @end
 
@@ -59,9 +60,16 @@
     
     if (self)
     {
-        // TODO: Initialize the Mobile Service client with your URL and key
-        // MIND THE HTTPS in the URL!!
-        _client = [MSClient clientWithApplicationURLString:@""];
+        // Initialize the Mobile Service client with your URL and key   
+        _client = [MSClient clientWithApplicationURLString:@"https://hummiiapp.azurewebsites.net"];
+        
+        QSAppDelegate *delegate = (QSAppDelegate *)[[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext *context = delegate.managedObjectContext;
+        _store = [[MSCoreDataStore alloc] initWithManagedObjectContext:context];
+        _client.syncContext = [[MSSyncContext alloc] initWithDelegate:nil dataSource:_store callback:nil];
+        
+        // Create an MSSyncTable instance to allow us to work with the TodoItem table
+        _syncTable = [_client syncTableWithName:@"ManusSyncTable"];
         
         _table = [_client tableWithName:@"ManuItem"];
         _data = [NSArray array];
@@ -112,14 +120,21 @@
                 completion();
             }
      ];
+    
+//    [self.syncTable insert:item
+//                completion:^(NSDictionary * _Nullable item, NSError * _Nullable error) {
+//                    [self logErrorIfNotNil:error];
+//                    completion();
+//                }
+//     ];
 
 }
 
 -(void)completeItem:(NSDictionary *)item completion:(QSCompletionBlock)completion
 {
-    // Set the item to be complete (we need a mutable copy)
+    // Set the item to be completed (we need a mutable copy)
     NSMutableDictionary *mutable = [item mutableCopy];
-    [mutable setObject:@YES forKey:@"complete"];
+    [mutable setObject:@YES forKey:@"completed"];
     
     // Update the item in the TodoItem table and remove from the items array on completion
     [self.table update:mutable completion:^(NSDictionary * _Nullable item, NSError * _Nullable error) {

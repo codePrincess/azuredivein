@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>authority</key>
-	<string>https://login.microsoftonline.com/yourdirectorynamegoeshere.onmicrosoft.com/</string>
+	<string>https://login.microsoftonline.com/mobiledir.onmicrosoft.com/</string>
 	<key>clientId</key>
-	<string></string>
+	<string>c3c9b2c6-0f3e-40ea-b9b2-f472357e490f</string>
 	<key>scopes</key>
 	<array>
 		<string>c3c9b2c6-0f3e-40ea-b9b2-f472357e490f</string>
@@ -17,9 +17,9 @@
 	<key>taskWebAPI</key>
 	<string>http://localhost/tasks:3000</string>
 	<key>emailSignUpPolicyId</key>
-	<string></string>
+	<string>B2C_1_DoSignInOrUp</string>
 	<key>emailSignInPolicyId</key>
-	<string></string>
+	<string>B2C_1_DoSignInOrUp</string>
 	<key>fullScreen</key>
 	<false/>
 	<key>showClaims</key>
