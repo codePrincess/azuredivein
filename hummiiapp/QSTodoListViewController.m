@@ -90,7 +90,7 @@
     
     NSDictionary *item = self.todoService.data[indexPath.row];
     
-    cell.textLabel.textColor = [item[@"complete"] boolValue] ? [UIColor grayColor] : [UIColor blackColor];
+    cell.textLabel.textColor = [item[@"completed"] boolValue] ? [UIColor grayColor] : [UIColor blackColor];
     cell.textLabel.text = [item valueForKey:@"text"];
     
     return cell;
@@ -114,7 +114,7 @@
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.textLabel.textColor = [UIColor grayColor];
     
-    // Ask the todoService to set the item's complete value to YES
+    // Ask the todoService to set the item's completed value to YES
     NSDictionary *dict = self.todoService.data[indexPath.row];
     
     __weak typeof(self) weakSelf = self;
@@ -127,14 +127,14 @@
 {
     NSDictionary *item = self.todoService.data[indexPath.row];
  
-    // If the item is complete, then this is just pending upload. Editing is not allowed
-    return [item[@"complete"] boolValue] ? UITableViewCellEditingStyleNone : UITableViewCellEditingStyleDelete;
+    // If the item is completed, then this is just pending upload. Editing is not allowed
+    return [item[@"completed"] boolValue] ? UITableViewCellEditingStyleNone : UITableViewCellEditingStyleDelete;
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Customize the Delete button to say "complete"
-    return @"complete";
+    // Customize the Delete button to say "completed"
+    return @"completed";
 }
 
 
@@ -156,7 +156,7 @@
 {
     if (self.itemText.text.length  == 0) return;
     
-    NSDictionary *item = @{ @"text" : self.itemText.text, @"complete" : @NO };
+    NSDictionary *item = @{ @"text" : self.itemText.text, @"completed" : @NO };
     
     [self.refreshControl beginRefreshing];
     

@@ -1,0 +1,19 @@
+PODS:
+  - ADALiOS (1.2.6)
+  - HockeySDK (4.1.0-alpha.2):
+    - HockeySDK/AllFeaturesLib (= 4.1.0-alpha.2)
+  - HockeySDK/AllFeaturesLib (4.1.0-alpha.2)
+
+DEPENDENCIES:
+  - ADALiOS
+  - HockeySDK (from `https://download.hockeyapp.net/preseason/sdk/ios/HockeySDK.podspec`)
+
+EXTERNAL SOURCES:
+  HockeySDK:
+    :podspec: https://download.hockeyapp.net/preseason/sdk/ios/HockeySDK.podspec
+
+SPEC CHECKSUMS:
+  ADALiOS: ddfa6d7acf8e7d58e0d813ec5eec857c59f72fcc
+  HockeySDK: 329d2f24529e8a7a01ff005ecc204d6db71f1c44
+
+COCOAPODS: 0.39.0

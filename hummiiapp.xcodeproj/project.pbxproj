@@ -13,6 +13,9 @@
 		03D1004716EC58300005A1A9 /* QSTodoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D1004616EC58300005A1A9 /* QSTodoListViewController.m */; };
 		03D1004A16EC58490005A1A9 /* QSTodoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D1004916EC58490005A1A9 /* QSTodoService.m */; };
 		03D1004D16EC5A680005A1A9 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D1004B16EC5A680005A1A9 /* MainStoryboard_iPhone.storyboard */; };
+		205E39CE1CDBF08100E166DC /* QSTodoDataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 205E39CD1CDBF08100E166DC /* QSTodoDataModel.xcdatamodel */; };
+		205E39D01CDBFA2200E166DC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205E39CF1CDBFA2200E166DC /* CoreData.framework */; };
+		205E39D31CDBFABC00E166DC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 205E39D11CDBFABC00E166DC /* Model.xcdatamodeld */; };
 		6D20A9F91CAD6E66000C3E4C /* SamplesApplicationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D20A9F81CAD6E66000C3E4C /* SamplesApplicationData.m */; };
 		6D20A9FB1CAD6E6F000C3E4C /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D20A9FA1CAD6E6F000C3E4C /* settings.plist */; };
 		6D20A9FE1CAD6E8C000C3E4C /* SamplesPolicyData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D20A9FC1CAD6E8C000C3E4C /* SamplesPolicyData.m */; };
@@ -40,6 +43,9 @@
 		03D1004916EC58490005A1A9 /* QSTodoService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSTodoService.m; sourceTree = "<group>"; };
 		03D1004B16EC5A680005A1A9 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		1DFF12448F8E1290F9A55881 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		205E39CD1CDBF08100E166DC /* QSTodoDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QSTodoDataModel.xcdatamodel; sourceTree = "<group>"; };
+		205E39CF1CDBFA2200E166DC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		205E39D21CDBFABC00E166DC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		6D20A9F71CAD6E66000C3E4C /* SamplesApplicationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplesApplicationData.h; sourceTree = "<group>"; };
 		6D20A9F81CAD6E66000C3E4C /* SamplesApplicationData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SamplesApplicationData.m; sourceTree = "<group>"; };
 		6D20A9FA1CAD6E6F000C3E4C /* settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = settings.plist; sourceTree = "<group>"; };
@@ -63,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				205E39D01CDBFA2200E166DC /* CoreData.framework in Frameworks */,
 				A3BBD7791C05158D00DD0DB0 /* MicrosoftAzureMobile.framework in Frameworks */,
 				C0B64411DF9045F6AA30486C /* libPods.a in Frameworks */,
 			);
@@ -92,6 +99,7 @@
 		03D1001C16EC579A0005A1A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				205E39CF1CDBFA2200E166DC /* CoreData.framework */,
 				A3BBD7781C05158D00DD0DB0 /* MicrosoftAzureMobile.framework */,
 				D55724430A7A071FDBA6DB76 /* libPods.a */,
 			);
@@ -101,6 +109,7 @@
 		03D1002316EC579A0005A1A9 /* hummiiapp */ = {
 			isa = PBXGroup;
 			children = (
+				205E39CD1CDBF08100E166DC /* QSTodoDataModel.xcdatamodel */,
 				03D1002C16EC579A0005A1A9 /* QSAppDelegate.h */,
 				03D1002D16EC579A0005A1A9 /* QSAppDelegate.m */,
 				03D1004816EC58490005A1A9 /* QSTodoService.h */,
@@ -121,6 +130,7 @@
 				6D49B1511CB7CE1500DCB6E1 /* sounds */,
 				03D1002416EC579A0005A1A9 /* Supporting Files */,
 				6D49B14F1CB7C0D000DCB6E1 /* Images.xcassets */,
+				205E39D11CDBFABC00E166DC /* Model.xcdatamodeld */,
 			);
 			path = hummiiapp;
 			sourceTree = "<group>";
@@ -281,10 +291,12 @@
 			files = (
 				6D3059391CB40118001A3EBD /* QSUtilities.m in Sources */,
 				6D20A9F91CAD6E66000C3E4C /* SamplesApplicationData.m in Sources */,
+				205E39CE1CDBF08100E166DC /* QSTodoDataModel.xcdatamodel in Sources */,
 				03D1002A16EC579A0005A1A9 /* main.m in Sources */,
 				03D1002E16EC579A0005A1A9 /* QSAppDelegate.m in Sources */,
 				03D1004716EC58300005A1A9 /* QSTodoListViewController.m in Sources */,
 				03D1004A16EC58490005A1A9 /* QSTodoService.m in Sources */,
+				205E39D31CDBFABC00E166DC /* Model.xcdatamodeld in Sources */,
 				6D20AA001CAD72C6000C3E4C /* NSDictionary+UrlEncoding.m in Sources */,
 				6D20A9FE1CAD6E8C000C3E4C /* SamplesPolicyData.m in Sources */,
 			);
@@ -442,6 +454,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		205E39D11CDBFABC00E166DC /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				205E39D21CDBFABC00E166DC /* Model.xcdatamodel */,
+			);
+			currentVersion = 205E39D21CDBFABC00E166DC /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 03D1001216EC579A0005A1A9 /* Project object */;
 }
