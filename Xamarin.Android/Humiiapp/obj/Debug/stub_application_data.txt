@@ -1,0 +1,2 @@
+android.app.Application
+com.br.hummiiazure.demo.humiiapp
