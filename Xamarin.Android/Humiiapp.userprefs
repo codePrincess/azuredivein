@@ -1,0 +1,21 @@
+﻿<Properties StartupItem="Humiiapp/Humiiapp.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Humiiapp/MainActivity.cs">
+    <Files>
+      <File FileName="Humiiapp/MainActivity.cs" Line="22" Column="1" />
+      <File FileName="Humiiapp/Models/ManuItem.cs" Line="9" Column="3" />
+      <File FileName="Humiiapp/Services/ToDoService.cs" Line="24" Column="4" />
+      <File FileName="Humiiapp/Adapter/ToDoItemAdapter.cs" Line="45" Column="4" />
+      <File FileName="Humiiapp/Resources/values/Styles.xml" Line="8" Column="35" />
+      <File FileName="Humiiapp/Resources/values-v21/Styles.xml" Line="1" Column="1" />
+      <File FileName="Humiiapp/Properties/AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="Humiiapp/App.cs" Line="6" Column="22" />
+      <File FileName="Humiiapp/Resources/values/Strings.xml" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Humiiapp AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Nexus 4 (Lollipop)" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
+</Properties>
